@@ -3,7 +3,7 @@ import {assets, COLORS, FONTS, SIZES} from "../constants";
 import {FC} from "react";
 
 interface IHomeHeader {
-    onSearch: () => void
+    onSearch: (value: string) => void
 }
 export const HomeHeader: FC<IHomeHeader> = ({onSearch}) => {
     return (
