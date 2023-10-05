@@ -3,16 +3,17 @@ import {FC} from "react";
 import {COLORS, FONTS, SHADOWS, SIZES} from "../../../constants";
 
 interface IRectButton {
-    handlePress: () => void
+    handlePress: () => void,
+    minWidth?: number,
+    fonsSize?: number
 }
-export const RectButton: FC<IRectButton> = ({handlePress, }) => {
+export const RectButton: FC<IRectButton> = ({handlePress, minWidth}) => {
   return (
       <TouchableOpacity
           style={{
-
               backgroundColor: COLORS.primary,
               borderRadius: SIZES.extraLarge,
-              minWidth: 120,
+              minWidth: minWidth || 120,
               padding: SIZES.small,
               ...SHADOWS.light,
           }}
